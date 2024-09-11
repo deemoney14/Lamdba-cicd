@@ -10,7 +10,7 @@ on:
           
 jobs:
   deploy-lambda: # name of our job
-    runs-on: ubuntu-lastest #Sets or Specifies the runner
+    runs-on: ubuntu-latest #Sets or Specifies the runner
     steps:
       - uses: actions/checkout@v2
 
