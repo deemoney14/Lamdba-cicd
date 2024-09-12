@@ -24,7 +24,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r lambda/requirments.txt -t lambda/
 
-      - name: Configure AWS Creds #Sets up our AWS Credentials
+      - name: Configure AWS Credentials #Sets up our AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
@@ -35,7 +35,7 @@ jobs:
         run: |
           cd lambda
           zip -r lambda.zip .
-          aws lambda update-function-code --function-name My-Lambda-cicd --zip-file fileb://lambda.zip
+          aws lambda update-function-code --function-name my-test-cicd-lambda --zip-file fileb://lambda.zip
 
 
 
