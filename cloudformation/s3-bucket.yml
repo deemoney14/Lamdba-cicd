@@ -15,11 +15,12 @@ Resources:
     Type: 'AWS::S3::Bucket'
     Properties:
       BucketName: !Sub "my-bucket-${Environment}"
-    Tags:
-      - Key: Environment
-        Value: !Ref Environment
-      - Key: Name
-        Value: GithubActionsTesting
+      Tags:
+        - Key: Environment
+          Value: !Ref Environment
+        - Key: Name
+          Value: GithubActionsTesting
+ 
   Outputs:
     BucketName:
       Description: 'Name of created S3 Bucket'
