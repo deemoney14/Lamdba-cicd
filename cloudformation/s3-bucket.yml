@@ -11,7 +11,7 @@ Parameters:
       - production
 
 Resources:
-  S3Bucket:
+  GAS3Bucket:
     Type: 'AWS::S3::Bucket'
     Properties:
       BucketName: !Sub "my-bucket-${Environment}"
