@@ -11,7 +11,7 @@ Parameters:
       - production
 
 Resources:
-  MyS3Bucket:
+  MysamBucket:
     Type: 'AWS::S3::Bucket'
     Properties:
       Tags:
@@ -22,6 +22,6 @@ Resources:
   Outputs:
     BucketName:
       Description: Bucket Name
-      Value: !Ref MyS3Bucket
+      Value: !Ref MysamBucket
 
  
