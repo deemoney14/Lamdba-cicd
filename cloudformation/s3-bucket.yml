@@ -1,8 +1,8 @@
 AWSTemplateFormatVersion: '2010-09-09'
-Description: 's3 bucket'
+Description: 'S3 bucket'
 
 Parameters:
- Environment:
+  Environment:
     Type: String
     Default: test
     AllowedValues:
@@ -11,7 +11,7 @@ Parameters:
       - production
 
 Resources:
-  MysamBucket:
+  MyS3Bucket:
     Type: 'AWS::S3::Bucket'
     Properties:
       Tags:
@@ -19,9 +19,12 @@ Resources:
           Value: !Ref Environment
         - Key: Project
           Value: GithubActions
-  Outputs:
-    BucketName:
-      Description: Bucket Name
-      Value: !Ref MysamBucket
+
+Outputs:
+  BucketName:
+    Description: The name of the S3 bucket
+    Value: !Ref MyS3Bucket
+
+
 
  
