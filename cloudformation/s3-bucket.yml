@@ -18,9 +18,9 @@ Resources:
       Tags:
         - Key: Environment
           Value: !Ref Environment
-        - key: Environment
+        - Key: Environment
           Value: GithubActions
-  Outpost:
+  Outposts:
     BucketName:
       Description: Bucket Name
       Value: !Ref MyS3Bucket
